@@ -2,6 +2,6 @@ exec { "apt-get update":
 	command => "/usr/bin/apt-get --yes --force-yes update",
 }
 
-package { "oracle-xe":
+package { "jenkins":
 	require => Exec["apt-get update"],
 }
