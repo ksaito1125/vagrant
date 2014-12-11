@@ -1,13 +1,10 @@
 #! /usr/bin/env bash
 
 PROVISION=/var/vagrant_provision
-LOG=/var/log/vagrant_provision.log
-
 if [ -f "${PROVISION}" ]
 then
 	exit 0
 fi
-touch ${LOG}
 
 # Add jenkins apt repository
 # https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu
