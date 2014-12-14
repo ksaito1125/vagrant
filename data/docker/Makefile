@@ -5,14 +5,15 @@ ps:
 	docker ps -a
 
 run:
-	docker run -it --name svn ksaito/svn:1.0 /bin/bash
+	docker run -itd -p 8080:80 --name svn ubuntu/svn
 
 rm:
+	-docker stop svn
 	docker rm svn
 
 build:
-	docker build -t ksaito/svn:1.0 .
+	docker build -t ubuntu/svn .
 
 rmi:
-	docker rmi ksaito/svn:1.0
+	docker rmi ubuntu/svn
 
